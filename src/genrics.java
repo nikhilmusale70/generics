@@ -1,6 +1,10 @@
 public class genrics {
 
     public static void main(String[] args) {
+        testMaximum();
+    }
+
+    public static void testMaximum(){
         String a = new String("Apple");
         String b = new String("Peach");
         String c = new String("Banana");
@@ -14,12 +18,12 @@ public class genrics {
         Float i = new Float(0.9);
 
         genrics gen = new genrics();
-        gen.maxNumbers(a,b,c);
-        gen.maxNumbers(d,e,f);
-        gen.maxNumbers(g,h,i);
+        testMaximum(a,b,c);
+        testMaximum(d,e,f);
+        testMaximum(g,h,i);
     }
 
-    public <T extends Comparable<T>> void maxNumbers (T a, T b, T c){
+    public static <T extends Comparable<T>> void testMaximum (T a, T b, T c){
         if ((a.compareTo(b) >= 0) && (a.compareTo(c) >= 0)){
                 System.out.println( a + " is greatest");
         }
