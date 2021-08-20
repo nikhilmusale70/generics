@@ -8,29 +8,35 @@ public class genrics {
         String a = new String("Apple");
         String b = new String("Peach");
         String c = new String("Banana");
+        String j = new String("Aello");
 
         Integer d = new Integer(4);
         Integer e = new Integer(5);
         Integer f = new Integer(6);
+        Integer k = new Integer(7);
 
         Float g = new Float(1.1);
         Float h = new Float(1.2);
         Float i = new Float(0.9);
+        Float l = new Float(1.3);
 
         genrics gen = new genrics();
-        testMaximum(a,b,c);
-        testMaximum(d,e,f);
-        testMaximum(g,h,i);
+        testMaximum(a,b,c,j);
+        testMaximum(d,e,f,k);
+        testMaximum(g,h,i,l);
     }
 
-    public static <T extends Comparable<T>> void testMaximum (T a, T b, T c){
-        if ((a.compareTo(b) >= 0) && (a.compareTo(c) >= 0)){
+    public static <T extends Comparable<T>> void testMaximum (T a, T b, T c, T d){
+        if ((a.compareTo(b) >= 0) && ((a.compareTo(c) >= 0) && (a.compareTo(d) >= 0))){
                 System.out.println( a + " is greatest");
         }
-        else if ((b.compareTo(c) >= 0) && (b.compareTo(a) >= 0)) {
+        else if ((b.compareTo(c) >= 0) && ((b.compareTo(a) >= 0) && (b.compareTo(d) >= 0))) {
             System.out.println( b + " is greatest");
         }
-        else if ((c.compareTo(a) >= 0) && (c.compareTo(b) >= 0))
+        else if ((c.compareTo(a) >= 0) && ((c.compareTo(b) >= 0) && (c.compareTo(d) >= 0)))
             System.out.println( c + " is greatest");
+
+        else if ((d.compareTo(a) >= 0) && ((d.compareTo(b) >= 0) && (d.compareTo(c) >= 0)))
+            System.out.println( d + " is greatest");
     }
 }
