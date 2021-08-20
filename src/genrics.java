@@ -1,15 +1,15 @@
 public class genrics {
     public static void main(String[] args) {
-        Float a = new Float(11.3);
-        Float b = new Float(11.4);
-        Float c = new Float(11.2);
+        String a = new String("Apple");
+        String b = new String("Peach");
+        String c = new String("Banana");
 
         genrics gen = new genrics();
         gen.maxNumbers(a,b,c);
 
     }
 
-    public void maxNumbers(Float a, Float b, Float c){
+    public void maxNumbers(String a, String b, String c){
         if ((a.compareTo(b) >= 0) && (a.compareTo(c) >= 0)){
                 System.out.println( a + " is greatest");
         }
